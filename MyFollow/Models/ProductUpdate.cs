@@ -13,9 +13,9 @@ namespace MyFollow.Models
         public string Introduction { get; set; }
         [DataType(DataType.MultilineText)]
         public string Detail { get; set; }
-        [DataType(DataType.MultilineText)]
         public string Media { get; set; }
-        [ForeignKey("Id")]
-        public Product product { get; set; }
+        public int ProductId { get; set; }
+        [ForeignKey("ProductId")]
+        public virtual Product Product { get; set; }
     }
 }

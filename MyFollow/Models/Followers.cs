@@ -8,9 +8,11 @@ namespace MyFollow.Models
 {
     public class Followers : CommonProperty
     {
-        [ForeignKey("Id")]
-        public User user { get; set; }
-        [ForeignKey("Id")]
-        public Product product { get; set; }
+        public int UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual User User { get; set; }
+        public int ProductId { get; set; }
+        [ForeignKey("ProductId")]
+        public virtual Product Product { get; set; }
     }
 }

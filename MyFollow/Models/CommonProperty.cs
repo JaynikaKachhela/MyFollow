@@ -12,8 +12,8 @@ namespace MyFollow.Models
         [Key]
         public int Id { get; set; }
         [DataType(DataType.Date)]
-        public string CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; }
         [DataType(DataType.Date)]
-        public string LastModifiedDate { get; set; }
+        public DateTime LastModifiedDate { get; set; }
     }
 }
